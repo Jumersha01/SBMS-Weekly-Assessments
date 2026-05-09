@@ -1,0 +1,46 @@
+package com.nt;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@SpringBootApplication
+public class Exam08InterApplication {
+
+	@Bean("messageSource")
+	public ResourceBundleMessageSource getSource() {
+		ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+		source.setBasename("App");
+		return source;
+	}
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctx = SpringApplication.run(Exam08InterApplication.class, args);
+	    Scanner sc  = new Scanner(System.in);
+		System.out.println("Enter Language Code: ");
+		String langCode = sc.next();
+		
+		System.out.println("Enter Country Code: ");
+		String countryCode = sc.next();
+		
+		Locale locale = Locale.of(langCode, countryCode);
+		
+		String message = ctx.getMessage("invalid.pin", args, locale);
+		String message1 = ctx.getMessage("transaction.m", args, locale);
+		String message2 = ctx.getMessage("bal.message", args, locale);
+		String message3 = ctx.getMessage("good.message", args, locale);
+		
+		System.out.println(message);
+		System.out.println(message1);
+		System.out.println(message2);
+		System.out.println(message3);
+		
+		
+	     
+	}
+
+}

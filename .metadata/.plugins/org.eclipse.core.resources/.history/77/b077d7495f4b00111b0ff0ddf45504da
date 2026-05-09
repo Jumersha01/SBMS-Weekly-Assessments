@@ -1,0 +1,9 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.FactoryBean;
+
+import com.nt.comp.Vehicle;
+
+public class VehiclFactory implements FactoryBean<Vehicle> {
+
+}

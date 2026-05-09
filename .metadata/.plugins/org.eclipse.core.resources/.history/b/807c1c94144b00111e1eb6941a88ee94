@@ -1,0 +1,37 @@
+package com.nt;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@SpringBootApplication
+public class Exam06InternationalizationApplication {
+
+	@Bean("rs")
+	public ResourceBundleMessageSource getMessageSource() {
+		ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+		source.setBasename("com/nt/comp/App");
+		return source;
+	}
+	public static void main(String[] args) {
+		try(ConfigurableApplicationContext run = SpringApplication.run(Exam06InternationalizationApplication.class, args);Scanner sc = new Scanner(System.in)){
+			System.out.println("Enter Language code: ");
+			String langCode = sc.next();
+			
+			System.out.println("Enter Country code: ");
+			String countryCode = sc.next();
+			
+			Locale local =  Locale.of(langCode,countryCode);
+			
+			String msg1 = run.getMessage("welcome.message", new Object[] {},local);
+			System.out.println(msg1);
+		}
+       
+	}
+
+}

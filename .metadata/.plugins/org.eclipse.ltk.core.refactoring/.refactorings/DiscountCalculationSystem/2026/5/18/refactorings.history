@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;info.properties&apos; to &apos;DiscountCalculationSystem/src/main/java/com.nt.comp&apos;&#x0D;&#x0A;- Original project: &apos;DiscountCalculationSystem&apos;&#x0D;&#x0A;- Destination element: &apos;DiscountCalculationSystem/src/main/java/com.nt.comp&apos;&#x0D;&#x0A;- Original element: &apos;info.properties&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nt.comp" element1="src/main/java/info.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1777697215379" units="0" version="1.0"/>
+</session>

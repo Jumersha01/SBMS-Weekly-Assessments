@@ -1,0 +1,16 @@
+package com.nt.sbeans;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.nt.comp.Vehicle;
+
+@Component
+public class Vehiclee {
+   
+@Autowired
+Map<String,Vehicle> vehicle;
+	
+}

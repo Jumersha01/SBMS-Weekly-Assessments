@@ -1,0 +1,37 @@
+package com.nt;
+
+import java.util.Locale;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
+
+@SpringBootApplication
+public class Exam07InternationalizationApplication {
+
+	@Bean("messageSource")
+	public ResourceBundleMessageSource getSource() {
+		ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+		source.setBasename("Order");
+		return source;
+	}
+
+	public static void main(String[] args) {
+
+		try (ConfigurableApplicationContext ctx = SpringApplication.run(Exam07InternationalizationApplication.class,
+				args)) {
+			String msg1 = ctx.getMessage("order.confirm", new Object[] { "Junaid", "Biryani", 1200 }, Locale.ENGLISH);
+			System.out.println(msg1);
+
+			String msg2 = ctx.getMessage("order.confirm", new Object[] { "Junaid", "Biryani", 1200 }, Locale.CHINESE);
+
+			System.out.println(msg2);
+			
+			String msg3 = ctx.getMessage("order.confirm", new Object[]{"Junaid","Biryani",1200},Locale.of("hi","IN"));
+		    System.out.println(msg1);
+		}
+	}
+
+}

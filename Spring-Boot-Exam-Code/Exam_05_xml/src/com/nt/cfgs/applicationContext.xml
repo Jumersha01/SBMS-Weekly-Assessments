@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       
+     <bean id="tkt" class="com.nt.sbean.Ticket">
+     
+     <property name="ticketId" value="101"></property>
+     <property name="source" value="Hydrabad"></property>
+     <property name="destination" value="Bhusawal"></property>
+     
+     </bean>
+     <bean id="psg" class="com.nt.sbean.Passenger">
+   <constructor-arg ref="tkt"></constructor-arg>
+   <property name="passengerId" value="201"></property>
+  <property name="name" value="Junaid"></property>
+     </bean>
+       
+       </beans>
+

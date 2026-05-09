@@ -1,0 +1,13 @@
+package com.nt.sbeans;
+
+import com.nt.comp.Vehicle;
+
+public class Bike implements Vehicle {
+
+	@Override
+	public void calculateTax() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

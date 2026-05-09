@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="cart" class="com.nt.sbeans.Cart">
+ 
+ <property name="product" ref="p" ></property>
+ 
+ <property name="cartId" value="101"></property>
+ <property name="userName" value="Junaid"></property>
+ 
+ </bean>
+ 
+ <bean id="p" class="com.nt.sbeans.Product">
+ 
+ <property name="productId" value="102"></property>
+ <property name="name" value="Laptop"></property>
+ <property name="price" value="45000"></property>
+ 
+ </bean>
+</beans>

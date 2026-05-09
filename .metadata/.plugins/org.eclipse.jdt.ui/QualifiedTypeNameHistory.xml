@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.context.support.FileSystemXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.nt.sbea.Order"/>
+    <fullyQualifiedTypeName name="com.nt.sbeans.Counter"/>
+    <fullyQualifiedTypeName name="com.nt.config.AppConfig"/>
+    <fullyQualifiedTypeName name="com.nt.sbeans.Student"/>
+    <fullyQualifiedTypeName name="com.nt.sbeans.DiscountCalculate"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+</qualifiedTypeNameHistroy>

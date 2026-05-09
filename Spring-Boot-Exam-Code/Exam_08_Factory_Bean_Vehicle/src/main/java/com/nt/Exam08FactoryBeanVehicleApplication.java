@@ -1,0 +1,21 @@
+package com.nt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.nt.comp.Vehicle;
+import com.nt.sbeans.VehiclFactory;
+
+@SpringBootApplication
+public class Exam08FactoryBeanVehicleApplication {
+
+	public static void main(String[] args) throws Exception {
+		ConfigurableApplicationContext ctx =SpringApplication.run(Exam08FactoryBeanVehicleApplication.class, args);
+		VehiclFactory fac =ctx.getBean(VehiclFactory.class);
+		Vehicle  vehicle = fac.getObject();
+		vehicle.calculateTax();
+		
+	}
+
+}

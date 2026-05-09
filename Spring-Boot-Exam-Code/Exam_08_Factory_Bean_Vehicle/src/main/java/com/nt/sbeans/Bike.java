@@ -1,0 +1,31 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import com.nt.comp.Vehicle;
+
+@Component("bike")
+public class Bike implements Vehicle {
+
+	@Value("MH-19-0368")
+	String vehicleNo;
+	
+	@Value("Platina")
+	String brandName;
+	
+	@Value("Petrol")
+	String fuelType;
+	
+	@Value("75")
+	double milage;
+	
+	@Value("120000")
+	double price;
+
+	@Override
+	public void calculateTax() {
+		System.out.println("The Bike road tax is: "+(this.price*0.08)+"\nInsurance Amount: "+(this.price*0.05+"\nFinal Amount: "+(this.price+(this.price*0.08)+(this.price*0.05))));
+		
+	}
+}
